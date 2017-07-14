@@ -1,0 +1,17 @@
+{
+  "name": "elegent-brush",
+  "version": "1.0.0",
+  "description": "d3-brush",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "keywords": [
+    "d3-brush"
+  ],
+  "author": "cwj",
+  "license": "ISC",
+  "dependencies": {
+    "d3-brush": "^1.0.4"
+  }
+}
