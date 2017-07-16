@@ -115,6 +115,10 @@ let brushL = d3.brushX()
 let brushG = main
     .append("g")
     .call(brush)
+    .call(brush.filter(function () {
+        return event.target !== brushG._groups[0][0].firstElementChild
+    }))
+
 brushG.select(".handle--n").remove()
 brushG.select(".handle--e").remove()
 brushG.select(".handle--s").remove()
@@ -150,9 +154,9 @@ function brushHandleL(target, type, selection) {
 }
 
 function display () {
-    console.log(mainSelection)
-    console.log("告警:")
-    console.log(Math.round(sy.invert(mainSelection[0][1])), Math.round(sy.invert(mainSelection[1][1])))
-    console.log("时间:")
-    console.log(sx.invert(mainSelection[0][0]), sx.invert(mainSelection[1][0]))
+    // console.log(mainSelection)
+    // console.log("告警:")
+    // console.log(Math.round(sy.invert(mainSelection[0][1])), Math.round(sy.invert(mainSelection[1][1])))
+    // console.log("时间:")
+    // console.log(sx.invert(mainSelection[0][0]), sx.invert(mainSelection[1][0]))
 }
